@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary-bg: #4a5560;
+  --primary-text-color: deepskyblue;
+  --accent-color: white;
+}
+
+::selection {
+  background-color: deeppink;
+}
+
+body {
+  background-color: var(--primary-bg);
+}
+
+header,
+footer {
+  height: 15vh;
+  text-align: center;
+}
+
+header p {
+  color: var(--accent-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-text-color);
+}
+
+main {
+  min-height: 70vh;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  border: 2px dashed var(--accent-color);
+  width: 30%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+.card:hover,
+.card:hover h3 {
+  box-shadow: 0 0 10px 5px var(--primary-text-color),
+    0 0 10px var(--primary-text-color) inset;
+}
+
+.card h3 {
+  border: 2px solid var(--accent-color);
+  font-size: 150%;
+  position: relative;
+  bottom: 30px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--primary-bg);
+  transition: all 0.5s linear;
+}
+
+.card p {
+  color: var(--primary-text-color);
+}
+
+pre {
+  font-family: monospace;
+  background: linear-gradient(gray, deepskyblue);
+  color: var(--accent-color);
+  border-radius: 10px;
+  padding: 5px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  user-select: all;
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
